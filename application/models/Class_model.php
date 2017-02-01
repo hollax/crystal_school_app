@@ -6,61 +6,69 @@
  * and open the template in the editor.
  */
 
-
 /**
- * Description of Class
+ * Description of User
  *
  * @author Wakeel Ogunsanya
  */
-class Class_model extends My_Model {
+class Department extends My_Model {
 
-    public $class_id;
-    
-    
-    public $class_name;
-    
-    public $department_id;
-    
-    public $staffstatus_id;
-    
+
+    public $id;
+
+    public $name;
+
+    public $SCHOOLARM_ID;
+
     public $user_id;
-    
-    public $teacher_id;
 
-    
-    protected $table = 'class';
-    
-    protected $primary = 'class_id';
+    public $create_time;
+
+    public $edit_time;
 
 
+    protected $table = 'department';
+
+    protected $primary = 'id';
+
+    /**
+     * Column definition
+     *
+     * @var array
+     */
     protected $columns = array(
-        'class_id' => array(
-            'type' => 'int',
-            'constraint' => '11',
+        'id' => array(
+            'type' => 'INT',
+            'constraint' => 11,
             'unsigned' => TRUE,
             'auto_increment' => TRUE,
         ),
-        'class_name' => array(
+
+        'name' => array(
             'type' => 'varchar',
-            'constraint' => '255',
+            'constraint' => '40',
         ),
-         'department_id' => array(
-                'type' => 'int',
-                'constraint' => '11',
+
+        'SCHOOLARM_ID' => array(
+            'type' => 'varchar',
+            'constraint' => '20',
         ),
-         'staffstatus_id' => array(
-                'type' => 'varchar',
-                'constraint' => '255',
-        ),
+
         'user_id' => array(
-                'type' => 'int',
-                'constraint' => '11',
+            'type' => 'int',
+            'constraint' => '5',
+            'default' => '7',
         ),
-        'teacher_id' => array(
-                'type' => 'int',
-                'constraint' => '5',
+
+        'create_time' => array(
+            'type' => 'datetime',
+            //'default' => 'CURRENT_TIMESTAMP'
         ),
+        'edit_time' => array(
+            'type' => 'datetime',
+        ),
+
     );
-    
-   
+
+
 }
