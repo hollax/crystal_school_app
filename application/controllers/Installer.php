@@ -38,8 +38,8 @@ class Installer extends MY_Controller{
             'attendance',
             'bank',
             'class_model',
-            'department',
-            'expenses', 
+            'class_section',
+            'expenses_model', 
             'expensestype', 
             'messages', 
             'payment', 
@@ -49,11 +49,12 @@ class Installer extends MY_Controller{
             'schoolfees',
             'school_fees_item',
             'schoolfeespayment',
-            'session',
+            'school_session',
             'staff',
             'staffbank',
             'subject',
             'setup',
+            'school_arm',
             'term',
             'user'
         );
@@ -81,14 +82,6 @@ class Installer extends MY_Controller{
     }
 
    
-
-    public function _view() {
-
-        // load the layout and pass the action content
-        $this->load->view('layouts/page' , array(
-            'action_view' => 'Installing tables'
-        ) );
-    }
 
 
 }

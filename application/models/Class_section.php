@@ -12,13 +12,17 @@
  *
  * @author Wakeel Ogunsanya
  */
-class Class_model extends My_Model {
+class Class_section extends My_Model {
 
     public $class_id;
     
     
     public $class_name;
     
+    /**
+     * FOreign key of department.deparment_id
+     * @var int 
+     */
     public $department_id;
     
     public $staffstatus_id;

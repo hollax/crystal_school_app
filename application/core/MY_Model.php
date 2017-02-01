@@ -195,7 +195,7 @@ class My_Model extends CI_Model{
     public function delete()
     {
         $where = array(
-            'id' => $this->{$this->primary}
+           $this->primary => $this->{$this->primary}
         );
         $this->db->delete( $this->getTable()  ,$where );
     }
@@ -227,13 +227,13 @@ class My_Model extends CI_Model{
                 $primary => $this->{$primary}
             );
 
-            if(property_exists($this, 'modified')) $data['modified'] = date('Y-m-d H:i:s');
+            if(property_exists($this, 'edit_time')) $data['edit_time'] = date('Y-m-d H:i:s');
 
             $this->db->update(  $this->getTable(), $data,$where );
         }
         else
         {
-            if(property_exists($this, 'created')) $data['created'] = date('Y-m-d H:i:s');
+            if(property_exists($this, 'create_time')) $data['create_time'] = date('Y-m-d H:i:s');
 
             $this->db->insert(  $this->getTable(), $data);
             $id = $this->db->insert_id();

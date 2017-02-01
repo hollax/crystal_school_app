@@ -11,7 +11,7 @@
  *
  * @author Wakeel Ogunsanya
  */
-class Department extends My_Model {
+class Class_model extends My_Model {
 
 
     public $id;
@@ -66,9 +66,17 @@ class Department extends My_Model {
         ),
         'edit_time' => array(
             'type' => 'datetime',
+            'null' => true
         ),
 
     );
+    
+    
+    public function getArmName()
+    {
+        $this->load->model('school_arm' , 'school_arm_model');
+        return $this->school_arm_model->getOne(array('schoolarm_id' => $this->SCHOOLARM_ID))->name ;
+    }
 
 
 }

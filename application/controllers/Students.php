@@ -12,34 +12,34 @@
  * @author Wakeel Ogunsanya
  */
 class Students extends MY_Controller {
-    
-    
-    
+
+
+
     public function add()
     {
-        
+
         $this->load->library('smartytpl');
         
-        
+
         $this->smartytpl->show('students/add');
-        
+
     }
-    
+
     public function edit( $id = '')
     {
-        
-        
+
+
     }
-    
-    
+
+
     public function view($id = '')
     {
-        
+
     }
-    
-    
+
+
     public function delete( $id = '')
     {
-        
+
     }
 }

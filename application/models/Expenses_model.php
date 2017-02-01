@@ -1,24 +1,24 @@
 <?php 
 
 class Expenses_model extends My_Model {
-    
-    
+
+
     public $expenses_id;
-    
+
     public $expenses_reason;
-    
+
     public $expenses_amount;
-    
+
     public $expenses_datetime;
-    
+
     public $expensestype_id;
-    
+
     public $staff_id;
-    
+
     public $user_id;
- 
+
     public $expenses_status;
-    
+
     public $expenses_dateadded;
 
 

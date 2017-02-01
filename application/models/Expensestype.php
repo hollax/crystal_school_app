@@ -64,7 +64,7 @@ class Expensestype extends My_Model {
         ),
         'user_id' => array(
             'type' => 'int',
-            'null' => true, 
+            'null' => true,
             'constraint' => 11
         ),
         'create_time' => array(
@@ -72,7 +72,8 @@ class Expensestype extends My_Model {
             //'default' => 'CURRENT_TIMESTAMP'
         ),
         'edit_time' => array(
-            'type' => 'datetime'
+            'type' => 'datetime',
+            'null' => true
         )
 
 
